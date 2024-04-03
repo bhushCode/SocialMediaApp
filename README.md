@@ -1,0 +1,1 @@
+This is a social media app that is Built on the Model-View-ViewModel (MVVM) architecture, prioritizes clean code structure, scalability, and maintainability. With features including posting, commenting, liking, and more
