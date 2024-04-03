@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+<variable
+    name="users"
+    type="com.example.socialmediaapp.model.UserModelClass" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activity.UsersProfileActivity">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/main_background_color"
+            tools:context=".bottomnavigationfragments.UserProfileFragment">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/linearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:orientation="vertical"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.flaviofaria.kenburnsview.KenBurnsView
+                        android:id="@+id/user_profile_activity_profile_banner"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_100sdp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/bannerimage"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/user_profile_activity_follow_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_20sdp"
+                        android:background="@drawable/follow_btn_design"
+                        android:paddingStart="@dimen/_25sdp"
+                        android:paddingEnd="@dimen/_25sdp"
+                        android:text="Follow"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_13ssp"
+                        android:textStyle="bold"
+
+                        />
+
+                </LinearLayout>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/user_profile_activity_profile_image"
+                    android:layout_width="@dimen/_70sdp"
+                    android:layout_height="@dimen/_70sdp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/userprofile"
+                    app:civ_border_color="#FF000000"
+                    app:civ_border_width="3dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
+                    app:layout_constraintEnd_toEndOf="@+id/linearLayout"
+                    app:layout_constraintHorizontal_bias="0.05"
+                    app:layout_constraintStart_toStartOf="@+id/linearLayout"
+                    app:layout_constraintTop_toTopOf="@+id/linearLayout"
+                    app:layout_constraintVertical_bias="1.0" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/user_profile_activity_txt_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="user name"
+                android:textStyle="bold"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_below="@id/cl1"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:textSize="@dimen/_13ssp" />
+
+            <TextView
+                android:id="@+id/user_profile_activity_txt_followers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="followers"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_below="@id/user_profile_activity_txt_username"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:textSize="@dimen/_13ssp" />
+
+            <TextView
+                android:id="@+id/user_profile_activity_txt_following"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="followers"
+                android:layout_below="@id/user_profile_activity_txt_username"
+                android:layout_toRightOf="@id/user_profile_activity_txt_followers"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:textSize="@dimen/_13ssp" />
+        </RelativeLayout>
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="main_background_color">#0E0C0A</color>
+    <color name="like_color">#C521FF</color>
+    <color name="dark_grey">#656363</color>
+    <color name="follow_btn_color">#1DA1F2</color>
+</resources>
